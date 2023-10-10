@@ -16,4 +16,31 @@ return {
   { import = "astrocommunity.color.transparent-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.completion.codeium-vim" },
+  { import = "astrocommunity.editing-support.zen-mode-nvim" },
+  {
+    "folke/zen-mode.nvim",
+    opts = {
+      window = {
+        backdrop = 1, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
+        width = 120, -- width of the Zen window
+        height = 1, -- height of the Zen window
+        options = {
+          number = true, -- disable number column
+          relativenumber = true, -- disable relative numbers
+        },
+      },
+      plugins = {
+        options = {
+          enabled = false,
+        },
+        twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
+        gitsigns = { enabled = false }, -- disables git signs
+        tmux = { enabled = false }, -- disables the tmux statusline
+      },
+      on_open = function(win)
+      end,
+      on_close = function()
+      end,
+    }
+  }
 }

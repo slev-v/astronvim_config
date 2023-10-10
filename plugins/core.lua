@@ -63,6 +63,28 @@ return {
       return opts
     end,
   },
+  {
+    "rebelot/heirline.nvim",
+    opts = function(_, opts)
+      opts.winbar = nil
+      return opts
+    end
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = function(_, opts)
+      opts.source_selector = {
+        winbar = false, -- toggle to show selector on winbar
+        statusline = false,
+        sources = {
+          { source = "filesystem" },
+          { source = "buffers" },
+          { source = "git_status" },
+        },
+      }
+      return opts
+    end
+  }
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --
