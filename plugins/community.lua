@@ -4,6 +4,17 @@ return {
   -- example of imporing a plugin, comment out to use it or add your own
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
+  { import = "astrocommunity.motion.hop-nvim" },
+  { import = "astrocommunity.bars-and-lines.bufferline-nvim" },
+  {
+    "akinsho/bufferline.nvim",
+    opts = {
+      options = {
+        show_close_icon = false,
+        show_buffer_close_icons = false,
+      },
+    }
+  },
   { import = "astrocommunity.colorscheme.rose-pine" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
@@ -14,6 +25,7 @@ return {
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.color.transparent-nvim" },
+  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   {
     "transparent.nvim",
     opts = {
@@ -45,7 +57,9 @@ return {
       extra_groups = {
         "StatusLine",
         "StatusLineNC",
+        "TabLine",
         "TabLineFill",
+        "TabLineSel",
         "NormalFloat",
         "NvimTreeNormal",
         "NeoTreeNormal",
@@ -85,5 +99,5 @@ return {
       on_close = function()
       end,
     }
-  }
+  },
 }
