@@ -18,12 +18,6 @@ return {
   },
 
   -- Set colorscheme to use
-  -- colorscheme = "rose-pine",
-  -- colorscheme = "tokyonight-storm",
-  -- colorscheme = "tokyonight-night",
-  -- colorscheme = "tokyonight-moon",
-  -- colorscheme = "onedark",
-  -- colorscheme = "palenight",
   colorscheme = "kanagawa",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
