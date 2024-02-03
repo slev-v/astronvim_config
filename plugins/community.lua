@@ -12,6 +12,7 @@ return {
       options = {
         show_close_icon = false,
         show_buffer_close_icons = false,
+        sort_by = "insert_at_end",
       },
     }
   },
@@ -74,11 +75,11 @@ return {
     "folke/zen-mode.nvim",
     opts = {
       window = {
-        backdrop = 1, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
-        width = 120, -- width of the Zen window
-        height = 1, -- height of the Zen window
+        backdrop = 1,            -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
+        width = 120,             -- width of the Zen window
+        height = 1,              -- height of the Zen window
         options = {
-          number = true, -- disable number column
+          number = true,         -- disable number column
           relativenumber = true, -- disable relative numbers
         },
       },
@@ -86,9 +87,9 @@ return {
         options = {
           enabled = false,
         },
-        twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
+        twilight = { enabled = true },  -- enable to start Twilight when zen mode opens
         gitsigns = { enabled = false }, -- disables git signs
-        tmux = { enabled = false }, -- disables the tmux statusline
+        tmux = { enabled = false },     -- disables the tmux statusline
       },
       on_open = function(win)
       end,
