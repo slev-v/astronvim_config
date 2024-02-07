@@ -7,13 +7,13 @@ return {
   -- first key is the mode
   n = {
     ["<leader>c"] = {
-        function()
-          local bufs = vim.fn.getbufinfo { buflisted = true }
-          require("astronvim.utils.buffer").close(0)
-          if require("astronvim.utils").is_available "alpha-nvim" and not bufs[2] then require("alpha").start(true) end
-        end,
-        desc = "Close buffer",
-      },
+      function()
+        local bufs = vim.fn.getbufinfo { buflisted = true }
+        require("astronvim.utils.buffer").close(0)
+        if require("astronvim.utils").is_available "alpha-nvim" and not bufs[2] then require("alpha").start(true) end
+      end,
+      desc = "Close buffer",
+    },
     -- second key is the lefthand side of the map
     ["<leader>uz"] = { "<cmd>ZenMode<cr>", desc = "Toogle ZenMode" },
     -- mappings seen under group name "Buffer"
